@@ -12,20 +12,24 @@ $btnswitch.addEventListener("click", () => {
 
 $dialog.addEventListener("submit", () => {
 	if (isOn === false) {
-		$stat.textContent = "ON";
-		$span.textContent = "ON";
+		$stat.textContent = "OFF";
+		$span.textContent = "OFF";
 
 		document.body.classList.remove("light-off");
 		document.body.classList.add("light-on");
 
-		let isOn = true;
+		$img.src = "assets/glowstone-on.webp";
+
+		isOn = true;
 	} else if (isOn === true) {
-		$stat.textContent = "OFF";
-		$span.textContent = "OFF";
+		$stat.textContent = "ON";
+		$span.textContent = "ON";
 
 		document.body.classList.remove("light-on");
 		document.body.classList.add("light-off");
 
-		let isOn = false;
+		$img.src = "assets/glowstone-off.webp";
+
+		isOn = false;
 	}
 });
